@@ -54,20 +54,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const playlist = [
     {
       name: "clario - pretty girl",
-      file: "../music/clario.mp3",
+      file: "music/clario.mp3",
     },
-    { name: "fnaf-1-music-box", file: "../music/fnaf-1" },
+    { name: "fnaf-1-music-box", file: "music/fnaf-1" },
     {
       name: "Lana Del Rey - Young And Beautiful",
-      file: "../music/LanaDelRey.mp3",
+      file: "music/LanaDelRey.mp3",
     },
     {
       name: "we fell in love in october",
-      file: "../music/in_october.mp3",
+      file: "music/in_october.mp3",
     },
     {
       name: "? ? ?",
-      file: "../music/CrossingBridges.mp3",
+      file: "music/CrossingBridges.mp3",
     },
   ];
 
