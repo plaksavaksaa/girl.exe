@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>субтитры на ховер со звуком</title>
+  </head>
+  <body>
+    <div
+      class="item"
+      data-talkie="мои родители купили эту кровать, когда мне было восемь. пружины скрипели каждый раз, когда я поворачивалась. сейчас мне тринадцать, и мои ноги достают до края"
+    >
+      Наведи на меня
+    </div>
+    <div class="item" data-talkie="А это второй элемент">И на меня</div>
+
+    <img
+      class="item"
+      src="images/items/flattershy.png"
+      data-talkie="Это изображение"
+    />
+
+    <div id="talkie"></div>
+
+    <!-- Подключаем звук -->
+    <audio id="typeSound" src="puk-v-ekho.mp3"></audio>
+
+    <style>
+      .item {
+        display: inline-block;
+        margin: 20px;
+        padding: 10px 20px;
+        background: #eee;
+        cursor: pointer;
+        border-radius: 6px;
+        font-family: sans-serif;
+      }
+
+      /* Фиксированный блок субтитров */
+      #talkie {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        width: 500px;
+        transform: translateX(-50%);
+        min-height: 40px;
+        padding: 12px 20px;
+        /* background: rgba(0, 0, 0, 0.7); */
+        color: rgb(0, 0, 0);
+        font-size: 17px;
+        border-radius: 8px;
+        font-family: sans-serif;
+        text-align: center;
+        /* white-space: nowrap; */
+        pointer-events: none;
+      }
+    </style>
+    <script>
+      const items = document.querySelectorAll(".item");
+      const talkie = document.getElementById("talkie");
+      const typeSound = document.getElementById("typeSound");
+
+      let typingInterval;
+
+      function typeText(text) {
+        clearInterval(typingInterval);
+        talkie.textContent = "";
+        let i = 0;
+
+        typingInterval = setInterval(() => {
+          talkie.textContent += text[i];
+
+          // Перезапускаем звук на каждую букву
+          typeSound.currentTime = 0;
+          typeSound.play();
+
+          i++;
+          if (i >= text.length) {
+            clearInterval(typingInterval);
+          }
+        }, 40); // скорость печати
+      }
+
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          const text = item.dataset.talkie;
+          typeText(text);
+        });
+
+        item.addEventListener("mouseleave", () => {
+          clearInterval(typingInterval);
+          talkie.textContent = "";
+        });
+      });
+    </script>
+  </body>
+</html>

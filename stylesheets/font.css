@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Miss Fajardose";
+  src: url("../font/MissFajardose-Regular.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+/* brill */
+@font-face {
+  font-family: "Brill";
+  src: url("Brill-Bold.eot");
+  src: local("Brill Bold"), local("Brill-Bold"),
+    url("Brill-Bold.eot?#iefix") format("embedded-opentype"),
+    url("Brill-Bold.woff2") format("woff2"),
+    url("Brill-Bold.woff") format("woff"),
+    url("Brill-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brill";
+  src: url("Brill-BoldItalic.eot");
+  src: local("Brill Bold Italic"), local("Brill-BoldItalic"),
+    url("Brill-BoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("Brill-BoldItalic.woff2") format("woff2"),
+    url("Brill-BoldItalic.woff") format("woff"),
+    url("Brill-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brill";
+  src: url("Brill-Roman.eot");
+  src: local("Brill Roman"), local("Brill-Roman"),
+    url("Brill-Roman.eot?#iefix") format("embedded-opentype"),
+    url("Brill-Roman.woff2") format("woff2"),
+    url("Brill-Roman.woff") format("woff"),
+    url("Brill-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brill";
+  src: url("Brill-Italic.eot");
+  src: local("Brill Italic"), local("Brill-Italic"),
+    url("Brill-Italic.eot?#iefix") format("embedded-opentype"),
+    url("Brill-Italic.woff2") format("woff2"),
+    url("Brill-Italic.woff") format("woff"),
+    url("Brill-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
