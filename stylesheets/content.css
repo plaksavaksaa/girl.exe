@@ -13,6 +13,7 @@ body {
   width: 4625px;
   height: 3041px;
   cursor: url("../hand.svg"), pointer;
+  zoom: 0.5;
 }
 
 #cloud-l {
